@@ -11,8 +11,9 @@ angular.module('app', [
 
 .controller('indexCtrl', [ '$scope', require('./../components/index/controllers/') ])
 .controller('wizardCtrl', [ '$scope', require('./../components/wizard/controllers/') ])
+.controller('permalinkCtrl', [ '$scope', require('./../components/permalink/controllers/') ])
 
-// Fire it up 
+// Light the fires and kick the tires 
 angular.element(document).ready(function() {
     angular.bootstrap(document, ['app'])
 });

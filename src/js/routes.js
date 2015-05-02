@@ -10,5 +10,10 @@ module.exports = function($urlRouterProvider, $stateProvider) {
             url: '/wizard',
             templateUrl: 'components/wizard/html/index.html',
             controller: 'wizardCtrl'
+        })
+        .state('permalink', {
+            url: '/permalink',
+            templateUrl: 'components/permalink/html/index.html',
+            controller: 'permalinkCtrl'
         });
 }

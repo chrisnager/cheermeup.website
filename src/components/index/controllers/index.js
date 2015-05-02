@@ -1,3 +1,3 @@
 module.exports = function($scope) {
-    $scope.message = 'Test'; 
+    $scope.message = 'Index Page! Jump in the wizard and stuff'; 
 }
