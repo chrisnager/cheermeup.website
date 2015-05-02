@@ -1,5 +1,5 @@
 # Cheer me up
-Plz.
+*Jeopardy music plays faintly*
 
 ### Getting started
 ```
@@ -11,4 +11,3 @@ Run the app with
 gulp dist
 gulp
 ```
-
