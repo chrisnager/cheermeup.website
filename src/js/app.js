@@ -9,8 +9,8 @@ angular.module('app', [
 
 .config(["$urlRouterProvider", "$stateProvider", require('./routes') ])
 
-.factory('TestFactory', [ require('./../components/factory.TestFactory.js') ])
-.controller('TestController', [ '$scope', 'TestFactory', require('./../components/ctrl.mainCtrl.js') ])
+.controller('indexCtrl', [ '$scope', require('./../components/index/controllers/') ])
+.controller('wizardCtrl', [ '$scope', require('./../components/wizard/controllers/') ])
 
 // Fire it up 
 angular.element(document).ready(function() {
