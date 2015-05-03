@@ -69,9 +69,6 @@ gulp.task('javascript', function () {
     .pipe(gulp.dest('./dist/js/'));
 });
 
-
-
-
 gulp.task('sass', function() {
   gulp.src('src/scss/**/*.scss')
   .pipe(sass({style: 'compressed' }).on('error', gutil.log))
