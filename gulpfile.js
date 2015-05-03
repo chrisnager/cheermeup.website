@@ -41,9 +41,6 @@ gulp.task('livereload', function() {
 
 gulp.task('browserify', function() {
   gulp.src(['src/js/app.js'])
-  .pipe(plumber({
-       errorHandler: onError
-  })) 
   .pipe(browserify({}).on('error', gutil.log))
   .pipe(concat('bundle.js'))
   .pipe(uglify())
@@ -64,7 +61,7 @@ gulp.task('javascript', function () {
   });
 
   return gulp.src('./src/js/app.js')
-    .pipe(browserified)
+    .pipe(browserified).on('error', onError)
     .pipe(sourcemaps.init({loadMaps: true}))
         // Add transformation tasks to the pipeline here.
         .pipe(uglify())
