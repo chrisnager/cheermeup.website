@@ -1,7 +1,5 @@
 @import 'normalize';
+@import 'basscss';
 
-body {
-  background: #5D5D5D;
-  color: white;
-  margin: 40px;
-}
+.full-height { height: 100% }
+.height-inherit { height: inherit }
