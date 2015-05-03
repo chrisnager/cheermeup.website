@@ -1,38 +1,46 @@
-<button class="button" ng-hide="wizardSection===0" ng-click="sectionChange('previous')">Previous Section</button>
+<button class="button-transparent" ng-hide="wizardSection===0" ng-click="sectionChange('previous')">&lsaquo;</button>
 
 <div ng-show="wizardSection===0">
-    <h1>Choose Your Background</h1>
-    <ul>
-        <li ng-repeat="background in backgrounds" ng-click="choose('0',background.id)"><img src="{{background.url}}"/></li>
+    <h1>Choose your background</h1>
+    <ul class="list-reset mb0">
+        <li style="cursor:pointer" ng-repeat="background in backgrounds" ng-click="choose('0',background.id)"><img class="full-width" style="max-height:200px;vertical-align:top;object-fit:cover" src="{{background.url}}"></li>
     </ul>
-    <button class="button" ng-click="sectionChange('next')">Next Section</button>
+    <div class="p2">
+        <button class="full-width block button" ng-click="sectionChange('next')">Next Section</button>
+    </div>
 </div>
 
 <div ng-show="wizardSection===1">
-    <h1>Choose Your Emoji</h1>
-    <ul>
+    <h1>Choose your emoji</h1>
+    <ul class="list-reset">
         <li ng-repeat="emoji in emojis" ng-click="choose('1',emoji.id)"><div>{{emoji.text}}</div></li>
     </ul>
-    <button class="button" ng-click="sectionChange('next')">Next Section</button>
+    <div class="p2">
+        <button class="full-width block button" ng-click="sectionChange('next')">Next Section</button>
+    </div>
 </div>
 
 <div ng-show="wizardSection===2">
-    <h1>Choose Your Music</h1>
-    <ul>    
+    <h1>Choose your music</h1>
+    <ul class="list-reset">    
          <li ng-repeat="song in songs" ng-click="choose('2',song.id)"><div>{{song.url}}</div></li>
     </ul>
-    <button class="button" ng-click="sectionChange('next')">Next Section</button>
+    <div class="p2">
+        <button class="button" ng-click="sectionChange('next')">Next Section</button>
+    </div>
 </div>
 
 <div ng-show="wizardSection===3">
-    <h1>Choose Your Quote</h1>
-    <ul>    
+    <h1>Choose your quote</h1>
+    <ul class="list-reset">    
          <li ng-repeat="quote in quotes" ng-click="choose('3',quote.id)"><div>{{quote.text}}</div></li>
     </ul>
-    <button class="button" ng-click="finish()">Finish</button>
+    <div class="p2">
+        <button class="button" ng-click="finish()">Finish</button>
+    </div>
 </div>
 
-<div>Background: {{selections[0].selectionNumber}}</div>
-<div>Emoji: {{selections[1].selectionNumber}}</div>
-<div>Music: {{selections[2].selectionNumber}}</div>
-<div>Quote: {{selections[3].selectionNumber}}</div>
+<div hidden>Background: {{selections[0].selectionNumber}}</div>
+<div hidden>Emoji: {{selections[1].selectionNumber}}</div>
+<div hidden>Music: {{selections[2].selectionNumber}}</div>
+<div hidden>Quote: {{selections[3].selectionNumber}}</div>
