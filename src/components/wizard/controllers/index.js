@@ -1,4 +1,4 @@
-module.exports = function($scope, Contents, $state ) {
+module.exports = function($scope, Contents, $state) {
     $scope.message = 'THIS IS THE WIZARD';
     $scope.wizardSection = 0;
     $scope.progress = 0;
@@ -25,6 +25,7 @@ module.exports = function($scope, Contents, $state ) {
         $scope.data.backgrounds = res.data
     })
     $scope.sectionChange = function(direction) {
+        window.scrollTo(0, 0);
         if(direction==='next') {
             $scope.wizardSection++;
             $scope.updateProgress(direction);
