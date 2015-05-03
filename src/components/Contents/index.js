@@ -46,12 +46,30 @@ module.exports = function() {
 
     var getSongs = function() {
         var songs = [
-            {text: 'Aww Yeah Dawg'},
-            {text: 'Wut'},
-            {text: 'Noice'},
-            {text: 'Wow'},
-            {text: '4 Real'},
-            {text: 'My Dawg'}
+            {
+                title: 'Aww Yeah Dawg',
+                url: '',
+            },
+            {
+                title: 'Wut',
+                url: '',
+            },
+            {
+                title: 'Noice',
+                url: '',
+            },
+            {
+                title: 'Wow',
+                url: '',
+            },
+            {
+                title: '4 Real',
+                url: '',
+            },
+            {
+                title: 'My Dawg',
+                url: '',
+            }
         ];
 
         return songs

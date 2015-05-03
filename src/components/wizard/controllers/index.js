@@ -1,7 +1,13 @@
-module.exports = function($scope, Contents) {
+module.exports = function($scope, Contents, $state ) {
     $scope.message = 'THIS IS THE WIZARD';
     $scope.wizardSection = 0;
-    $scope.selections = [];
+    
+    $scope.selections = {
+        background: null,
+        song: null,
+        emoji: null,
+        quote: null
+    };
     
     $scope.data = Contents.get();
     
@@ -15,10 +21,14 @@ module.exports = function($scope, Contents) {
     }
     
     $scope.choose = function(index, section, selection) {
-        $scope.selections[section] = { 
+        
+        var item = {
             id: index,
-            content: selection,
-        };
+            content: selection
+        }
+
+        $scope.selections[section] = item
+
+        
     }
-    
 }

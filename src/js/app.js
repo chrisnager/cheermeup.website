@@ -9,7 +9,7 @@ angular.module('app', [
 
 .config(["$urlRouterProvider", "$stateProvider", require('./routes') ])
 .controller('indexCtrl', [ '$scope', 'Contents', require('./../components/index/controllers/') ])
-.controller('wizardCtrl', [ '$scope', 'Contents', require('./../components/wizard/controllers/') ])
+.controller('wizardCtrl', [ '$scope', 'Contents', '$state', require('./../components/wizard/controllers/') ])
 .controller('permalinkCtrl', [ '$scope', '$location', require('./../components/permalink/controllers/') ])
 .controller('dataTestCtrl', [ '$scope', 'Contents', require('./../components/dataTest/controllers/') ])
 .service('Contents', [ require('./../components/Contents') ])
