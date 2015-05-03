@@ -2,11 +2,9 @@
 
 require('angular');
 require('angular-ui-router');
-require('./../components/Emoji');
 
 angular.module('app', [
-    'ui.router',
-    'sc.twemoji'
+    'ui.router'
 ])
 
 .config(["$urlRouterProvider", "$stateProvider", require('./routes') ])
