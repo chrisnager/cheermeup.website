@@ -8,7 +8,7 @@
             <img class="full-width" style="height:200px;vertical-align:top;object-fit:cover" src="https://media3.giphy.com/media/{{ background.id }}/giphy.gif">
         </li>
     </ul>
-    <div class="border-box full-width p2 fixed bottom-0" ng-show="selections['background']">
+    <div class="border-box full-width p2 fixed bottom-0 slideIn" ng-show="selections['background']">
         <button class="full-width block button p2 h3 bg-olive" ng-click="sectionChange('next')">Next section</button>
     </div>
 </div>
@@ -18,7 +18,7 @@
     <ul class="list-reset">
         <li class="border-box border pointer lg-left lg-col-4 center" ng-class="{'is-selected': selections['emoji'].id === $index}" ng-repeat="emoji in data.emojis track by $index" ng-click="choose($index, 'emoji', emoji)"><div class="height-184"><div class="inline-block scale-8">{{emoji}}</div></div></li>
     </ul>
-    <div class="border-box full-width p2 fixed bottom-0" ng-show="selections['emoji']">
+    <div class="border-box full-width p2 fixed bottom-0 slideIn" ng-show="selections['emoji']">
         <button class="full-width block button p2 h3 bg-olive" ng-click="sectionChange('next')">Next section</button>
     </div>
 </div>
@@ -28,7 +28,7 @@
     <ul class="list-reset">    
          <li class="border-box border pointer lg-left lg-col-4 center p3 h2" ng-class="{'is-selected': selections['song'].id === $index }" ng-repeat="song in data.songs track by $index" ng-click="choose($index, 'song', song.title)"><div class="h1 bold">{{song.title}}</div></li>
     </ul>
-    <div class="border-box full-width p2 fixed bottom-0" ng-show="selections['song']">
+    <div class="border-box full-width p2 fixed bottom-0 slideIn" ng-show="selections['song']">
         <button class="full-width block button p2 h3 bg-olive" ng-click="sectionChange('next')">Next section</button>
     </div>
 </div>
@@ -38,13 +38,7 @@
     <ul class="list-reset">    
          <li class="border-box border pointer lg-left lg-col-4 center p3 h2" ng-class="{'is-selected': selections['quote'].id === $index }" ng-repeat="quote in data.quotes" ng-click="choose($index, 'quote', quote.text)"><div class="h1 bold">{{quote.text}}</div></li>
     </ul>
-    <div class="border-box full-width p2 fixed bottom-0" ng-show="selections['quote']">
+    <div class="border-box full-width p2 fixed bottom-0 slideIn" ng-show="selections['quote']">
         <a class="full-width block button p2 h3 center bg-olive" href="/#/permalink?bg={{ selections.background.content }}&emoji={{ selections.emoji.content }}&quote={{ selections.quote.content }}&song={{ selections.song.content }}">Finish</a>
     </div>
-</div>
-
-<div ng-show="debug">
-    <pre>
-        {{ selections | json }}
-    </pre>
 </div>

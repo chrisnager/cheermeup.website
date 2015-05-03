@@ -1,7 +1,7 @@
 module.exports = function($scope, Contents, $state ) {
     $scope.message = 'THIS IS THE WIZARD';
     $scope.wizardSection = 0;
-    $scope.progress = 0.25;
+    $scope.progress = 0;
     
     $scope.selections = {
         background: null,
