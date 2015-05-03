@@ -20,13 +20,15 @@ module.exports = function($http, $q) {
 
     var getQuotes = function() {
         var quotes = [
-            {text: 'Aww Yeah'},
             {text: 'Wut'},
-            {text: 'Noice'},
-            {text: 'Wow'},
-            {text: '4 Real'},
-            {text: 'UNReal'},
-            {text: 'Strawberry Redaculous!'},
+            {text: 'techCrunchDisrupt'},
+            {text: 'shipIt'},
+            {text: 'mo so lo'},
+            {text: '@clintonhalpin'},
+            {text: '@iamnickvolpe'},
+            {text: '@chrisnager'},
+            {text: 'Jaaaavascript'},
+            {text: 'Is your machine on'},
             {text: 'Your Face'}
         ];
 
@@ -35,6 +37,10 @@ module.exports = function($http, $q) {
 
     var getSongs = function() {
         var songs = [
+            {
+                title: 'Journey: Failfully',
+                url: 'http://www.youtube.com/embed/OMD8hBsA-RI'
+            },
             {
                 title: 'Van Halen: Panama',
                 url: 'http://www.youtube.com/embed/w-NshzYK9y0',
