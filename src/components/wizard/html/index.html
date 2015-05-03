@@ -3,7 +3,10 @@
 <div ng-show="wizardSection===0">
     <h1 class="px2">Choose a background</h1>
     <ul class="list-reset mb0">
-        <li class="border pointer" ng-class="{'is-selected':selections[0].selectionNumber===background.id}" style="margin-top:-1px" ng-repeat="background in backgrounds" ng-click="choose('0',background.id)"><img class="full-width" style="max-height:200px;vertical-align:top;object-fit:cover" src="{{background.url}}"></li>
+        {{ selections.image }}
+        <li class="border pointer" ng-class="{'is-selected': selections['background'].id === $index }" style="margin-top:-1px" ng-repeat="background in data.backgrounds" ng-click="choose($index, 'background', background.url)">
+            <img class="full-width" style="max-height:200px;vertical-align:top;object-fit:cover" src="{{background.url}}">
+        </li>
     </ul>
     <div class="border-box full-width p2 fixed bottom-0" ng-hide="selections[0].selectionNumber===null">
         <button class="full-width block button" ng-click="sectionChange('next')">Next section</button>
@@ -13,7 +16,7 @@
 <div ng-show="wizardSection===1">
     <h1 class="px2">Choose a emoji</h1>
     <ul class="list-reset">
-        <li class="border pointer center" ng-class="{'is-selected':selections[1].selectionNumber===emoji.id}" ng-repeat="emoji in emojis" ng-click="choose('1',emoji.id)"><div style="font-size:128px">{{emoji.text}}</div></li>
+        <li class="border pointer center" ng-class="{'is-selected': selections['emoji'].id === $index }" ng-repeat="emoji in data.emojis track by $index" ng-click="choose($index, 'emoji', emoji)"><div style="font-size:128px">{{emoji}}</div></li>
     </ul>
     <div class="border-box full-width p2 fixed bottom-0" ng-hide="selections[1].selectionNumber===null">
         <button class="full-width block button" ng-click="sectionChange('next')">Next section</button>
@@ -23,7 +26,7 @@
 <div ng-show="wizardSection===2">
     <h1 class="px2">Choose a music</h1>
     <ul class="list-reset">    
-         <li class="border p3 pointer center h2" ng-class="{'is-selected':selections[2].selectionNumber===song.id}" ng-repeat="song in songs" ng-click="choose('2',song.id)"><div>{{song.url}}</div></li>
+         <li class="border p3 pointer center h2" ng-class="{'is-selected': selections['songs'].id === $index }" ng-repeat="song in data.songs track by $index" ng-click="choose($index, 'song', song.title)"><div>{{song.title}}</div></li>
     </ul>
     <div class="border-box full-width p2 fixed bottom-0" ng-hide="selections[2].selectionNumber===null">
         <button class="full-width block button" ng-click="sectionChange('next')">Next section</button>
@@ -33,14 +36,15 @@
 <div ng-show="wizardSection===3">
     <h1 class="px2">Choose a quote</h1>
     <ul class="list-reset">    
-         <li class="border p3 pointer center h2" ng-class="{'is-selected':selections[3].selectionNumber===quote.id}" ng-repeat="quote in quotes" ng-click="choose('3',quote.id)"><div>{{quote.text}}</div></li>
+         <li class="border p3 pointer center h2" ng-class="{'is-selected': selections['quotes'].id === $index }" ng-repeat="quote in data.quotes" ng-click="choose($index, 'quote', quote.text)"><div>{{quote.text}}</div></li>
     </ul>
     <div class="border-box full-width p2 fixed bottom-0" ng-hide="selections[3].selectionNumber===null">
-        <a class="full-width block button center" href="http://localhost:3000/#/permalink?emoji={{selections[1].selectionNumber}}&background={{selections[0].selectionNumber}}&song={{selections[2].selectionNumber}}&quote={{selections[3].selectionNumber}}">Finish</a>
+        <a class="full-width block button center" href="/#/permalink?bg={{ selections.background.content }}&emoji={{ selections.emoji.content }}&quote={{ selections.quote.content }}&song={{ selections.song.content }}">Finish</a>
     </div>
 </div>
 
-<div hidden>Background: {{selections[0].selectionNumber}}</div>
-<div hidden>Emoji: {{selections[1].selectionNumber}}</div>
-<div hidden>Music: {{selections[2].selectionNumber}}</div>
-<div hidden>Quote: {{selections[3].selectionNumber}}</div>
+<div ng-show="debug">
+    <pre>
+        {{ selections | json }}
+    </pre>
+</div>
