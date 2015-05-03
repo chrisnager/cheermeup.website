@@ -15,5 +15,11 @@ module.exports = function($urlRouterProvider, $stateProvider) {
             url: '/permalink',
             templateUrl: 'components/permalink/html/index.html',
             controller: 'permalinkCtrl'
+        })
+        .state('data', {
+            url: '/data',
+            templateUrl: 'components/dataTest/html/index.html',
+            controller: 'dataTestCtrl'
         });
+
 }
