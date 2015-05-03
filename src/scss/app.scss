@@ -1,16 +1,18 @@
 @import 'normalize';
 @import 'basscss';
 
+h1, h2, h3, h4, h5, h6,
+.font-family-inherit { font-family: inherit }
 .full-height { height: 100% }
 .height-inherit { height: inherit }
 .sans-serif { font-family: "Avenir Next", sans-serif }
-h1, h2, h3, h4, h5, h6,
-.font-family-inherit { font-family: inherit }
 .button { font-weight: 600 }
 .color-inherit { color: inherit }
 .background-color-inherit { background-color: inherit }
 .logo { font-weight: 200 }
-img.is-active {
+.pointer { cursor: pointer }
+
+.is-selected {
     box-sizing: border-box;
-    border: 3px solid;
+    border-color: #fff;
 }
