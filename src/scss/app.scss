@@ -3,6 +3,7 @@
 
 h1, h2, h3, h4, h5, h6,
 .font-family-inherit { font-family: inherit }
+.bold { font-weight: 600 }
 .full-height { height: 100% }
 .height-inherit { height: inherit }
 .height-184 { height: 184px }
@@ -13,7 +14,7 @@ h1, h2, h3, h4, h5, h6,
 .logo { font-weight: 200 }
 .pointer { cursor: pointer }
 .border-box { box-sizing: border-box }
-.text-shadow { text-shadow: 0 0 6px rgba(0,0,0,.50) }
+.text-shadow { text-shadow: 0 0 6px rgba(0, 0, 0, .5) }
 .is-selected { border-color: #fff }
 
 .scale-8 {
