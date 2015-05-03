@@ -43,7 +43,7 @@ module.exports = function($http, $q) {
                 url: 'http://www.youtube.com/embed/0Wi8Fv0AJA4'
             },
             {
-                title: 'Journey: Failfully',
+                title: 'Journey: Faithfully',
                 url: 'http://www.youtube.com/embed/OMD8hBsA-RI'
             },
             {
