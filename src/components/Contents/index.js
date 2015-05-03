@@ -22,6 +22,7 @@ module.exports = function($http, $q) {
     var getQuotes = function() {
         var quotes = [
             {text: 'Wut'},
+            {text: 'HackDisrupt'},
             {text: 'techCrunchDisrupt'},
             {text: 'shipIt'},
             {text: 'mo so lo'},
