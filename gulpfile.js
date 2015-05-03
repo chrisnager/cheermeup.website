@@ -29,10 +29,10 @@ function notifyLiveReload(event) {
 }
 
 gulp.task('express', function() {
-  server.use(connectLivereload({port: config.lrport}));
-  server.listen(config.port, function() {
-      console.log('Server started @ localhost:' + config.port);
-  })
+    var app = express();
+    app.use(connectLivereload({port: config.lrport}));
+    app.use(express.static(__dirname + '/dist'));
+    app.listen(config.port);
 });
 
 gulp.task('livereload', function() {
