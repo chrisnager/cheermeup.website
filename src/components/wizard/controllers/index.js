@@ -19,10 +19,12 @@ module.exports = function($scope, Contents, $state ) {
         }
     }
 
-   
-     
     $scope.data = Contents.get();
-    
+
+    Contents.get().backgrounds.then(function(res){
+        console.log(res.data)
+        $scope.data.backgrounds = res.data
+    })
     $scope.sectionChange = function(direction) {
         if(direction==='next') {
             $scope.wizardSection++;
@@ -42,7 +44,5 @@ module.exports = function($scope, Contents, $state ) {
         }
 
         $scope.selections[section] = item
-
-        
     }
 }

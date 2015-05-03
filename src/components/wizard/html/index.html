@@ -4,8 +4,8 @@
 <div ng-show="wizardSection===0">
     <h2 class="py2 m0 regular center">Choose a background</h2>
     <ul class="list-reset mb0">
-        <li class="border-box border pointer lg-left lg-col-4" ng-class="{'is-selected': selections['background'].id === $index }" style="margin-top:-1px" ng-repeat="background in data.backgrounds" ng-click="choose($index, 'background', background.url)">
-            <img class="full-width" style="height:200px;vertical-align:top;object-fit:cover" src="{{background.url}}">
+        <li class="border-box border pointer lg-left lg-col-4" ng-class="{'is-selected': selections['background'].id === $index }" style="margin-top:-1px" ng-repeat="background in data.backgrounds" ng-click="choose($index, 'background', 'https://media3.giphy.com/media/' + background.id + '/giphy.gif')">
+            <img class="full-width" style="height:200px;vertical-align:top;object-fit:cover" src="https://media3.giphy.com/media/{{ background.id }}/giphy.gif">
         </li>
     </ul>
     <div class="border-box full-width p2 fixed bottom-0" ng-show="selections['background']">
