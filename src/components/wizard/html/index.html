@@ -26,7 +26,7 @@
 <div ng-show="wizardSection===2">
     <h2 class="py2 m0 regular center">Choose a music</h2>
     <ul class="list-reset">    
-         <li class="border-box border pointer lg-left lg-col-4 center p3 h2" ng-class="{'is-selected': selections['song'].id === $index }" ng-repeat="song in data.songs track by $index" ng-click="choose($index, 'song', song.title)"><div>{{song.title}}</div></li>
+         <li class="border-box border pointer lg-left lg-col-4 center p3 h2" ng-class="{'is-selected': selections['song'].id === $index }" ng-repeat="song in data.songs track by $index" ng-click="choose($index, 'song', song.url)"><div>{{song.title}}</div></li>
     </ul>
     <div class="border-box full-width p2 fixed bottom-0 slideIn" ng-show="selections['song']">
         <button class="full-width block button bg-olive" ng-click="sectionChange('next')">Next section</button>
