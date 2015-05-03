@@ -1,8 +1,21 @@
 <div class="height-inherit border-box full-width p3 center white bg-cover" style="background-image:url({{ page.bg }})">
     <div class="inline-block scale-8">{{ page.emoji }}</div>
     <h1 class="text-shadow mt2 mb1" style="font-size:10vw">{{ page.quote }}</h1>
-    <a class="mb3 p2 button h3 bg-olive" href="javascript:void(0)">Share link: <input type="text" class="field-light gray" value="{{ page.url }}"></a>
     <br>
-    <a class="p2 button h3 bg-olive" ui-sref="index">Again?</a>
     <div my-youtube url="{{page.song}}?autoplay=1"></div>
+     <div class="border-box full-width p2 fixed bottom-0">
+        <div class="flex mxn2">
+        <div class="flex-auto p2">
+            <div class="p2 border border-blue">
+              <label>Share this</label>
+              <input type="text" class="field-light gray" value="{{ page.url }}"></a>
+            </div>
+            </div>
+            <div class="flex-auto p2">
+              <div class="p2 border border-blue">
+                <a class="p2 button h3 bg-olive" ui-sref="wizard">Create another?</a>
+              </div>
+            </div>
+          </div>
+     </div>
 </div>
