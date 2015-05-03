@@ -38,6 +38,10 @@ module.exports = function($http, $q) {
     var getSongs = function() {
         var songs = [
             {
+                title: 'Journey: Failfully',
+                url: 'http://www.youtube.com/embed/OMD8hBsA-RI'
+            },
+            {
                 title: 'Van Halen: Panama',
                 url: 'http://www.youtube.com/embed/w-NshzYK9y0',
             },
