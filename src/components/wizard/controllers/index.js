@@ -1,6 +1,7 @@
 module.exports = function($scope, Contents, $state ) {
     $scope.message = 'THIS IS THE WIZARD';
     $scope.wizardSection = 0;
+    $scope.progress = 0.25;
     
     $scope.selections = {
         background: null,
@@ -8,15 +9,28 @@ module.exports = function($scope, Contents, $state ) {
         emoji: null,
         quote: null
     };
-    
+
+    $scope.updateProgress = function(direction) {
+        var stepLen = (Object.keys($scope.selections).length / 4) * .25;
+        if(direction === 'next') {
+            $scope.progress = $scope.progress + stepLen
+        } else {
+            $scope.progress = $scope.pregress - stepLen
+        }
+    }
+
+   
+     
     $scope.data = Contents.get();
     
     $scope.sectionChange = function(direction) {
         if(direction==='next') {
             $scope.wizardSection++;
+            $scope.updateProgress(direction);
         } else
         if (direction==='previous') {
             $scope.wizardSection--;
+            $scope.updateProgress(direction);
         }
     }
     
