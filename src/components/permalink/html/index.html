@@ -1,7 +1,5 @@
-<div class="height-inherit center">
-    <img class="full-height" src="{{ page.bg }}" style="vertical-align:top;object-fit:cover">
-    <div class="full-width absolute top-0" style="transform:scale(1);transform-origin:50% 0">
-        <span>{{ page.emoji }}</span>
-    </div>
-    <h1 class="full-width absolute bottom-0 left-0">{{ page.quote }}</h1>
+<div class="height-inherit border-box full-width p3 center white bg-cover" style="background-image:url({{ page.bg }})">
+    <div class="inline-block" style="font-size:128px">{{ page.emoji }}</div>
+    <h1 class="mt2 mb1" style="font-size:10vw">{{ page.quote }}</h1>
+    <a class="p2 button h3 bg-teal" ui-sref="wizard">Share</a>
 </div>
