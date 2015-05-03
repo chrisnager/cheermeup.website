@@ -3,7 +3,7 @@
 <div ng-show="wizardSection===0">
     <h1>Choose Your Background</h1>
     <ul>
-        <li ng-repeat="background in backgrounds" ng-click="choose('0',background.id)"><img src="{{background.url}}"/></li>
+        <li ng-class="{'is-selected':selections[0].selectionNumber===background.id}" ng-repeat="background in backgrounds" ng-click="choose('0',background.id)"><img src="{{background.url}}"/></li>
     </ul>
     <button class="button" ng-click="sectionChange('next')">Next Section</button>
 </div>
@@ -11,7 +11,7 @@
 <div ng-show="wizardSection===1">
     <h1>Choose Your Emoji</h1>
     <ul>
-        <li ng-repeat="emoji in emojis" ng-click="choose('1',emoji.id)"><div>{{emoji.text}}</div></li>
+        <li ng-class="{'is-selected':selections[1].selectionNumber===background.id}" ng-repeat="emoji in emojis" ng-click="choose('1',emoji.id)"><div>{{emoji.text}}</div></li>
     </ul>
     <button class="button" ng-click="sectionChange('next')">Next Section</button>
 </div>
@@ -19,7 +19,7 @@
 <div ng-show="wizardSection===2">
     <h1>Choose Your Music</h1>
     <ul>    
-         <li ng-repeat="song in songs" ng-click="choose('2',song.id)"><div>{{song.url}}</div></li>
+         <li ng-class="{'is-selected':selections[2].selectionNumber===background.id}" ng-repeat="song in songs" ng-click="choose('2',song.id)"><div>{{song.url}}</div></li>
     </ul>
     <button class="button" ng-click="sectionChange('next')">Next Section</button>
 </div>
@@ -27,9 +27,9 @@
 <div ng-show="wizardSection===3">
     <h1>Choose Your Quote</h1>
     <ul>    
-         <li ng-repeat="quote in quotes" ng-click="choose('3',quote.id)"><div>{{quote.text}}</div></li>
+         <li ng-class="{'is-selected':selections[3].selectionNumber===background.id}" ng-repeat="quote in quotes" ng-click="choose('3',quote.id)"><div>{{quote.text}}</div></li>
     </ul>
-    <button class="button" ng-click="finish()">Finish</button>
+    <a class="button" ui-sref="permalink/emoji">Finish</a>
 </div>
 
 <div>Background: {{selections[0].selectionNumber}}</div>

@@ -78,4 +78,5 @@ module.exports = function($scope) {
     $scope.choose = function(section, number) {
         $scope.selections[section].selectionNumber = number;
     }
+    
 }
