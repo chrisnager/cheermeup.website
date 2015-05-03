@@ -5,6 +5,7 @@ h1, h2, h3, h4, h5, h6,
 .font-family-inherit { font-family: inherit }
 .full-height { height: 100% }
 .height-inherit { height: inherit }
+.height-184 { height: 184px }
 .sans-serif { font-family: "Avenir Next", sans-serif }
 .button { font-weight: 600 }
 .color-inherit { color: inherit }
@@ -14,8 +15,15 @@ h1, h2, h3, h4, h5, h6,
 .border-box { box-sizing: border-box }
 .text-shadow { text-shadow: 0 0 6px rgba(0,0,0,.50) }
 .is-selected { border-color: #fff }
-.scale-8 { transform: scale(8) }
-.my128 { margin-top: 128px; margin-bottom: 128px }
+
+.scale-8 {
+    -webkit-transform: scale(8);
+    -ms-transform: scale(8);
+    transform: scale(8);
+    -webkit-transform-origin: 50% 0;
+    -ms-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+}
 
 @media (min-width: 1023px) {
     .lg-left { float: left }
