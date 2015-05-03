@@ -1,4 +1,4 @@
-module.exports = function() {
+module.exports = function($http, $q) {
     var value = "Hey I'm a value and I'm being returned from a factory!";
 
     var getEmojis = function() {
@@ -7,15 +7,14 @@ module.exports = function() {
     }
 
     var getBackgrounds = function() {
-        var backgrounds = [
-            { url: 'https://media1.giphy.com/media/10pSeSHjy0OMV2/200.gif', },
-            { url: 'https://media3.giphy.com/media/O3GJk0JA3dDsk/200.gif', },
-            { url: 'https://s3.amazonaws.com/giphygifs/media/GwGXoeb0gm7sc/giphy.gif', },
-            { url: 'https://media4.giphy.com/media/nl5wVNRJSWcO4/200.gif', },
-            { url: 'https://media0.giphy.com/media/NTzW6P8cpt90Q/200_s.gif', },
-            { url: 'https://media4.giphy.com/media/Maz1hoeGskARW/200_s.gif', },
-        ]
-        return backgrounds
+        var deferred = $q.defer();
+
+        $http.get('http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC').then(function (res) {
+            deferred.resolve(res.data);
+        });
+
+        return deferred.promise;
+        
     }
     
     var getQuotes = function() {
