@@ -17,28 +17,17 @@ module.exports = function($http, $q) {
         return deferred.promise;
         
     }
-    
+
     var getQuotes = function() {
         var quotes = [
-            {text: 'Aww Yeah Dawg'},
+            {text: 'Aww Yeah'},
             {text: 'Wut'},
             {text: 'Noice'},
             {text: 'Wow'},
             {text: '4 Real'},
-            {text: 'My Dawg'}
-        ];
-
-        return quotes
-    }
-
-    var getQuotes = function() {
-        var quotes = [
-            {text: 'Aww Yeah Dawg'},
-            {text: 'Wut'},
-            {text: 'Noice'},
-            {text: 'Wow'},
-            {text: '4 Real'},
-            {text: 'My Dawg'}
+            {text: 'UNReal'},
+            {text: 'Strawberry Redaculous!'},
+            {text: 'Your Face'}
         ];
 
         return quotes
@@ -47,16 +36,20 @@ module.exports = function($http, $q) {
     var getSongs = function() {
         var songs = [
             {
-                title: 'Nicki Minaj - Only ft. Drake, Lil Wayne, Chris Brown',
+                title: 'Nicki Minaj: Starships',
                 url: 'http://www.youtube.com/embed/SeIJmciN8mo',
             },
             {
-                title: 'Chris Brown, Tyga - Ayo (Explicit)',
+                title: 'Drake: My Side',
                 url: 'http://www.youtube.com/embed/ndqJCDYHplo',
             },
             {
-                title: 'Drake - 0 to 100 / The Catch Up (Explicit).',
+                title: 'Gin and juice: Snoop Doggy Dogg',
                 url: 'http://www.youtube.com/embed/0Cxr1-b6Xkc',
+            },
+            {
+                title: 'Culture Club: Karma Chameleon',
+                url: 'http://www.youtube.com/embed/JmcA9LIIXWw',
             }
         ];
 
