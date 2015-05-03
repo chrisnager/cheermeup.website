@@ -2,7 +2,7 @@ module.exports = function() {
     var value = "Hey I'm a value and I'm being returned from a factory!";
 
     var getEmojis = function() {
-        var emojis = ['😁','😁',':shipit:','\u2764']
+        var emojis = ['😜','🏆','💁','🌞', '🐓']
         return emojis
     }
 
@@ -47,28 +47,16 @@ module.exports = function() {
     var getSongs = function() {
         var songs = [
             {
-                title: 'Aww Yeah Dawg',
-                url: '',
+                title: 'Nicki Minaj - Only ft. Drake, Lil Wayne, Chris Brown',
+                url: 'https://www.youtube.com/watch?v=zXtsGAkyeIo',
             },
             {
-                title: 'Wut',
-                url: '',
+                title: 'Chris Brown, Tyga - Ayo (Explicit)',
+                url: 'https://www.youtube.com/watch?v=zKCrSN9oXgQ',
             },
             {
-                title: 'Noice',
-                url: '',
-            },
-            {
-                title: 'Wow',
-                url: '',
-            },
-            {
-                title: '4 Real',
-                url: '',
-            },
-            {
-                title: 'My Dawg',
-                url: '',
+                title: 'Drake - 0 to 100 / The Catch Up (Explicit).',
+                url: 'https://www.youtube.com/watch?v=I2bBZvSPpOo',
             }
         ];
 
