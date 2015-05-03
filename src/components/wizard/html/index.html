@@ -36,7 +36,7 @@
          <li ng-class="{'is-selected':selections[3].selectionNumber===background.id}" ng-repeat="quote in quotes" ng-click="choose('3',quote.id)"><div>{{quote.text}}</div></li>
     </ul>
     <div class="p2">
-        <button class="button" ng-click="finish()">Finish</button>
+        <a class="button" href="http://localhost:3000/#/permalink?emoji={{selections[1].selectionNumber}}&background={{selections[0].selectionNumber}}&song={{selections[2].selectionNumber}}&quote={{selections[3].selectionNumber}}">Finish</a>
     </div>
 </div>
 
