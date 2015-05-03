@@ -9,8 +9,9 @@ module.exports = function($http, $q) {
 
     var getBackgrounds = function() {
         var deferred = $q.defer();
+        var url = 'http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC';
 
-        $http.get('http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC').then(function (res) {
+        $http.get(url).then(function (res) {
             deferred.resolve(res.data);
         });
 
