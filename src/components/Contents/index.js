@@ -20,12 +20,14 @@ module.exports = function($http, $q) {
 
     var getQuotes = function() {
         var quotes = [
-            {text: 'Aww Yeah Dawg'},
+            {text: 'Aww Yeah'},
             {text: 'Wut'},
             {text: 'Noice'},
             {text: 'Wow'},
             {text: '4 Real'},
-            {text: 'My Dawg'}
+            {text: 'UNReal'},
+            {text: 'Strawberry Redaculous!'},
+            {text: 'Your Face'}
         ];
 
         return quotes
