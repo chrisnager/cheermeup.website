@@ -1,4 +1,11 @@
-module.exports = function($urlRouterProvider, $stateProvider) {
+module.exports = function($urlRouterProvider, $stateProvider, $sceDelegateProvider) {
+    
+    $sceDelegateProvider.resourceUrlWhitelist([
+        'self',
+        'http://player.vimeo.com/**',
+        'http://www.youtube.com/embed/**'
+    ]);
+    
     $urlRouterProvider.otherwise('/');
     $stateProvider
         .state('index', {

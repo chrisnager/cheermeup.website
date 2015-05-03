@@ -48,15 +48,15 @@ module.exports = function() {
         var songs = [
             {
                 title: 'Nicki Minaj - Only ft. Drake, Lil Wayne, Chris Brown',
-                url: 'https://www.youtube.com/watch?v=zXtsGAkyeIo',
+                url: 'http://www.youtube.com/embed/SeIJmciN8mo',
             },
             {
                 title: 'Chris Brown, Tyga - Ayo (Explicit)',
-                url: 'https://www.youtube.com/watch?v=zKCrSN9oXgQ',
+                url: 'http://www.youtube.com/embed/ndqJCDYHplo',
             },
             {
                 title: 'Drake - 0 to 100 / The Catch Up (Explicit).',
-                url: 'https://www.youtube.com/watch?v=I2bBZvSPpOo',
+                url: 'http://www.youtube.com/embed/0Cxr1-b6Xkc',
             }
         ];
 
