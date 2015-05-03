@@ -3,16 +3,10 @@
 
 .full-height { height: 100% }
 .height-inherit { height: inherit }
-
-.emoji {
-    transform: scale(5);
-    display: inline-block;
-    -webkit-transform: scale(5); 
-    position: absolute;
-}
 .sans-serif { font-family: "Avenir Next", sans-serif }
 h1, h2, h3, h4, h5, h6,
 .font-family-inherit { font-family: inherit }
 .button { font-weight: 600 }
+.color-inherit { color: inherit }
 .background-color-inherit { background-color: inherit }
 .logo { font-weight: 200 }
