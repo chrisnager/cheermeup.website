@@ -1,24 +1,23 @@
-<button class="button-transparent" ng-hide="wizardSection===0" ng-click="sectionChange('previous')">&lsaquo;</button>
+<!--<button class="button-transparent" ng-hide="wizardSection===0" ng-click="sectionChange('previous')">&lsaquo;</button>-->
 
 <div ng-show="wizardSection===0">
     <h1 class="px2">Choose a background</h1>
     <ul class="list-reset mb0">
-        {{ selections.image }}
         <li class="border pointer" ng-class="{'is-selected': selections['background'].id === $index }" style="margin-top:-1px" ng-repeat="background in data.backgrounds" ng-click="choose($index, 'background', background.url)">
             <img class="full-width" style="max-height:200px;vertical-align:top;object-fit:cover" src="{{background.url}}">
         </li>
     </ul>
-    <div class="border-box full-width p2 fixed bottom-0" ng-hide="selections[0].selectionNumber===null">
+    <div class="border-box full-width p2 fixed bottom-0" ng-show="selections['background']">
         <button class="full-width block button" ng-click="sectionChange('next')">Next section</button>
     </div>
 </div>
 
 <div ng-show="wizardSection===1">
-    <h1 class="px2">Choose a emoji</h1>
+    <h1 class="px2">Choose an emoji</h1>
     <ul class="list-reset">
         <li class="border pointer center" ng-class="{'is-selected': selections['emoji'].id === $index }" ng-repeat="emoji in data.emojis track by $index" ng-click="choose($index, 'emoji', emoji)"><div style="font-size:128px">{{emoji}}</div></li>
     </ul>
-    <div class="border-box full-width p2 fixed bottom-0" ng-hide="selections[1].selectionNumber===null">
+    <div class="border-box full-width p2 fixed bottom-0" ng-show="selections['emoji']">
         <button class="full-width block button" ng-click="sectionChange('next')">Next section</button>
     </div>
 </div>
@@ -26,9 +25,9 @@
 <div ng-show="wizardSection===2">
     <h1 class="px2">Choose a music</h1>
     <ul class="list-reset">    
-         <li class="border p3 pointer center h2" ng-class="{'is-selected': selections['songs'].id === $index }" ng-repeat="song in data.songs track by $index" ng-click="choose($index, 'song', song.title)"><div>{{song.title}}</div></li>
+         <li class="border p3 pointer center h2" ng-class="{'is-selected': selections['song'].id === $index }" ng-repeat="song in data.songs track by $index" ng-click="choose($index, 'song', song.title)"><div>{{song.title}}</div></li>
     </ul>
-    <div class="border-box full-width p2 fixed bottom-0" ng-hide="selections[2].selectionNumber===null">
+    <div class="border-box full-width p2 fixed bottom-0" ng-show="selections['song']">
         <button class="full-width block button" ng-click="sectionChange('next')">Next section</button>
     </div>
 </div>
@@ -36,9 +35,9 @@
 <div ng-show="wizardSection===3">
     <h1 class="px2">Choose a quote</h1>
     <ul class="list-reset">    
-         <li class="border p3 pointer center h2" ng-class="{'is-selected': selections['quotes'].id === $index }" ng-repeat="quote in data.quotes" ng-click="choose($index, 'quote', quote.text)"><div>{{quote.text}}</div></li>
+         <li class="border p3 pointer center h2" ng-class="{'is-selected': selections['quote'].id === $index }" ng-repeat="quote in data.quotes" ng-click="choose($index, 'quote', quote.text)"><div>{{quote.text}}</div></li>
     </ul>
-    <div class="border-box full-width p2 fixed bottom-0" ng-hide="selections[3].selectionNumber===null">
+    <div class="border-box full-width p2 fixed bottom-0" ng-show="selections['quote']">
         <a class="full-width block button center" href="/#/permalink?bg={{ selections.background.content }}&emoji={{ selections.emoji.content }}&quote={{ selections.quote.content }}&song={{ selections.song.content }}">Finish</a>
     </div>
 </div>
