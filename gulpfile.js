@@ -12,8 +12,8 @@ var gulp = require('gulp'),
     browserify = require('browserify'),
     transform = require('vinyl-transform'),
     sourcemaps = require('gulp-sourcemaps'),
-    port = 4000,
-    lrport = 9088;
+    server = require('./server'),
+    config = require('./.env' + (process.env.NODE_ENV ? '.' + process.env.NODE_ENV : '') + '.js');
 
 var onError = function(err) {
     console.error(err.message);
@@ -29,14 +29,14 @@ function notifyLiveReload(event) {
 }
 
 gulp.task('express', function() {
-  var app = express();
-  app.use(connectLivereload({port: lrport}));
-  app.use(express.static(__dirname + '/dist'));
-  app.listen(port);
+    var app = express();
+    app.use(connectLivereload({port: config.lrport}));
+    app.use(express.static(__dirname + '/dist'));
+    app.listen(config.port);
 });
 
 gulp.task('livereload', function() {
-  tinylr.listen(lrport);
+  tinylr.listen(config.lrport);
 });
 
 gulp.task('browserify', function() {
@@ -98,5 +98,5 @@ gulp.task('dist', ['sass', 'mv-html', 'javascript'], function() {
 });
 
 gulp.task('default', ['express', 'livereload', 'watch'], function() {
-  console.log("Running @ http://localhost:" + port);
+  console.log("Running @ http://localhost:" + config.port);
 });
