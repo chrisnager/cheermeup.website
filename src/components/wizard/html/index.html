@@ -1,9 +1,12 @@
 <button class="button-transparent" ng-hide="wizardSection===0" ng-click="sectionChange('previous')">&lsaquo;</button>
 
 <div ng-show="wizardSection===0">
-    <h1 class="px2">Choose a background</h1>
+    <h1 class="px2">Choose a background - {{ selections.background }}</h1>
     <ul class="list-reset mb0">
-        <li class="border pointer" ng-class="{'is-selected':selections[0].selectionNumber===background.id}" style="margin-top:-1px" ng-repeat="background in backgrounds" ng-click="choose('0',background.id)"><img class="full-width" style="max-height:200px;vertical-align:top;object-fit:cover" src="{{background.url}}"></li>
+        {{ selections.image }}
+        <li class="border pointer" ng-class="{'is-selected': selections['background'].id === $index }" style="margin-top:-1px" ng-repeat="background in data.backgrounds" ng-click="choose($index, 'background', background.url)">
+            <img class="full-width" style="max-height:200px;vertical-align:top;object-fit:cover" src="{{background.url}}">
+        </li>
     </ul>
     <div class="p2">
         <button class="full-width block button" ng-click="sectionChange('next')">Next section</button>

@@ -1,11 +1,11 @@
-<div ng-repeat="emoji in emojis">
+<div ng-repeat="emoji in data.emojis track by $index">
     <span class="emoji">{{ emoji }}</span>
 </div>
 
-<div ng-repeat="background in backgrounds">
-    <img src="{{ background }}">
+<div ng-repeat="background in data.backgrounds">
+	<img src="{{ background.url }}">
 </div>
 
-<div ng-repeat="quote in quotes">
-    <span class="white">{{ quotes }}</span>
+<div ng-repeat="quote in data.quotes track by $index">
+    <span class="white">{{ quote.text }}</span>
 </div>
