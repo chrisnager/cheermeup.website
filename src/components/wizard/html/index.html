@@ -16,7 +16,7 @@
 <div ng-show="wizardSection===1">
     <h2 class="py2 m0 regular center">Choose an emoji</h2>
     <ul class="list-reset">
-        <li class="border-box border pointer lg-left lg-col-4 center" ng-class="{'is-selected': selections['emoji'].id === $index}" ng-repeat="emoji in data.emojis track by $index" ng-click="choose($index, 'emoji', emoji)"><div class="inline-block scale-8 my128">{{emoji}}</div></li>
+        <li class="border-box border pointer lg-left lg-col-4 center" ng-class="{'is-selected': selections['emoji'].id === $index}" ng-repeat="emoji in data.emojis track by $index" ng-click="choose($index, 'emoji', emoji)"><div><div class="inline-block scale-8">{{emoji}}</div></div></li>
     </ul>
     <div class="border-box full-width p2 fixed bottom-0" ng-show="selections['emoji']">
         <button class="full-width block button bg-olive" ng-click="sectionChange('next')">Next section</button>
