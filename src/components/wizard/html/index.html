@@ -2,7 +2,7 @@
 <progress value="{{ progress }}" class="progress yellow">{{ progress }}</progress>
 
 <div ng-show="wizardSection===0">
-    <h2 class="py2 m0 regular center">Choose your background</h2>
+    <h2 class="py2 m0 regular center">Choose a background</h2>
     <ul class="list-reset mb0">
         <li class="border-box border pointer lg-left lg-col-4" ng-class="{'is-selected': selections['background'].id === $index }" style="margin-top:-1px" ng-repeat="background in data.backgrounds" ng-click="choose($index, 'background', 'https://media3.giphy.com/media/' + background.id + '/giphy.gif')">
             <img class="full-width" style="height:200px;vertical-align:top;object-fit:cover" src="https://media3.giphy.com/media/{{ background.id }}/giphy.gif">
@@ -14,7 +14,7 @@
 </div>
 
 <div ng-show="wizardSection===1">
-    <h2 class="py2 m0 regular center">Choose your emoji</h2>
+    <h2 class="py2 m0 regular center">Choose an emoji</h2>
     <ul class="list-reset">
         <li class="border-box border pointer lg-left lg-col-4 center" ng-class="{'is-selected': selections['emoji'].id === $index}" ng-repeat="emoji in data.emojis track by $index" ng-click="choose($index, 'emoji', emoji)"><div class="height-184"><div class="inline-block scale-8">{{emoji}}</div></div></li>
     </ul>
@@ -24,7 +24,7 @@
 </div>
 
 <div ng-show="wizardSection===2">
-    <h2 class="py2 m0 regular center">Choose your music</h2>
+    <h2 class="py2 m0 regular center">Choose some music</h2>
     <ul class="list-reset">    
         <li class="border-box border pointer lg-left lg-col-4 center p3 h2" ng-class="{'is-selected': selections['song'].id === $index }" ng-repeat="song in data.songs track by $index" ng-click="choose($index, 'song', song.url)"><div class="h1 bold">{{song.title}}</div></li>
     </ul>
@@ -34,7 +34,7 @@
 </div>
 
 <div ng-show="wizardSection===3">
-    <h2 class="py2 m0 regular center">Choose your quote</h2>
+    <h2 class="py2 m0 regular center">Choose a quote</h2>
     <ul class="list-reset">    
          <li class="border-box border pointer lg-left lg-col-4 center p3 h2" ng-class="{'is-selected': selections['quote'].id === $index }" ng-repeat="quote in data.quotes" ng-click="choose($index, 'quote', quote.text)"><div class="h1 bold">{{quote.text}}</div></li>
     </ul>

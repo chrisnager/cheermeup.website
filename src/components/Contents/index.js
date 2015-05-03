@@ -38,6 +38,10 @@ module.exports = function($http, $q) {
     var getSongs = function() {
         var songs = [
             {
+                title: 'Jeopardy Theme',
+                url: 'http://www.youtube.com/embed/0Wi8Fv0AJA4'
+            },
+            {
                 title: 'Journey: Failfully',
                 url: 'http://www.youtube.com/embed/OMD8hBsA-RI'
             },
