@@ -2,9 +2,11 @@
 
 require('angular');
 require('angular-ui-router');
+require('angular-animate')
 
 angular.module('app', [
-    'ui.router'
+    'ui.router',
+    'ngAnimate'
 ])
 
 .config(["$urlRouterProvider", "$stateProvider","$sceDelegateProvider", require('./routes') ])

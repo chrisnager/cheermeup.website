@@ -34,12 +34,12 @@ module.exports = function($http, $q) {
     var getSongs = function() {
         var songs = [
             {
-                title: 'Nicki Minaj: Starships',
-                url: 'http://www.youtube.com/embed/SeIJmciN8mo',
+                title: 'Van Halen: Panama',
+                url: 'http://www.youtube.com/embed/w-NshzYK9y0',
             },
             {
-                title: 'Drake: My Side',
-                url: 'http://www.youtube.com/embed/ndqJCDYHplo',
+                title: 'Jay-Z: Empire State of Mind',
+                url: 'http://www.youtube.com/embed/Iv_1LVS3BdE',
             },
             {
                 title: 'Gin and juice: Snoop Doggy Dogg',
@@ -48,6 +48,18 @@ module.exports = function($http, $q) {
             {
                 title: 'Culture Club: Karma Chameleon',
                 url: 'http://www.youtube.com/embed/JmcA9LIIXWw',
+            },
+            {
+                title: 'Nicki Minaj: Starships',
+                url: 'http://www.youtube.com/embed/SeIJmciN8mo',
+            },
+            {
+                title: 'K-Ci & JoJo: All My Life',
+                url: 'http://www.youtube.com/embed/DXvMT_mVbqw',
+            },
+            {
+                title: 'Blink-182: All the Small Things',
+                url: 'http://www.youtube.com/embed/9Ht5RZpzPqw',
             }
         ];
 

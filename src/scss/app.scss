@@ -27,3 +27,15 @@ h1, h2, h3, h4, h5, h6,
     background: rgba(255,255,255,.5);
     height: 4px;
 }
+
+.slideIn {
+  transition:all .1s;
+}
+
+.slideIn.ng-hide-remove {
+  margin-bottom: -60px;
+}
+
+.slideIn.ng-hide-add {
+  margin-bottom: 0px;
+}
