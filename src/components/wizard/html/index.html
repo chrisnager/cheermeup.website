@@ -6,7 +6,7 @@
         <li class="border pointer" ng-class="{'is-selected':selections[0].selectionNumber===background.id}" style="margin-top:-1px" ng-repeat="background in backgrounds" ng-click="choose('0',background.id)"><img class="full-width" style="max-height:200px;vertical-align:top;object-fit:cover" src="{{background.url}}"></li>
     </ul>
     <div class="p2">
-        <button class="full-width block button" ng-click="sectionChange('next')">Next section</button>
+        <button ng-hide="selections[0].selectionNumber===null" class="full-width block button" ng-click="sectionChange('next')">Next section</button>
     </div>
 </div>
 
@@ -16,7 +16,7 @@
         <li class="border pointer center" ng-class="{'is-selected':selections[1].selectionNumber===emoji.id}" ng-repeat="emoji in emojis" ng-click="choose('1',emoji.id)"><div style="font-size:128px">{{emoji.text}}</div></li>
     </ul>
     <div class="p2">
-        <button class="full-width block button" ng-click="sectionChange('next')">Next section</button>
+        <button ng-hide="selections[1].selectionNumber===null" class="full-width block button" ng-click="sectionChange('next')">Next section</button>
     </div>
 </div>
 
@@ -26,7 +26,7 @@
          <li class="border p3 pointer center h2" ng-class="{'is-selected':selections[2].selectionNumber===song.id}" ng-repeat="song in songs" ng-click="choose('2',song.id)"><div>{{song.url}}</div></li>
     </ul>
     <div class="p2">
-        <button class="button" ng-click="sectionChange('next')">Next section</button>
+        <button ng-hide="selections[2].selectionNumber===null" class="button" ng-click="sectionChange('next')">Next section</button>
     </div>
 </div>
 
@@ -36,7 +36,7 @@
          <li class="border p3 pointer center h2" ng-class="{'is-selected':selections[3].selectionNumber===quote.id}" ng-repeat="quote in quotes" ng-click="choose('3',quote.id)"><div>{{quote.text}}</div></li>
     </ul>
     <div class="p2">
-        <a class="button" href="http://localhost:3000/#/permalink?emoji={{selections[1].selectionNumber}}&background={{selections[0].selectionNumber}}&song={{selections[2].selectionNumber}}&quote={{selections[3].selectionNumber}}">Finish</a>
+        <a ng-hide="selections[3].selectionNumber===null" class="button" href="http://localhost:3000/#/permalink?emoji={{selections[1].selectionNumber}}&background={{selections[0].selectionNumber}}&song={{selections[2].selectionNumber}}&quote={{selections[3].selectionNumber}}">Finish</a>
     </div>
 </div>
 
