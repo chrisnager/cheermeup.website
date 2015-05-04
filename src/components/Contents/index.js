@@ -32,6 +32,33 @@ module.exports = function($http, $q) {
             {text: 'Jaaaavascript'},
             {text: 'Is your machine on'},
             {text: 'Your Face'}
+            { title: "congratulations"},
+            { title: "We've made it"},
+            { title: "started from the bottom"},
+            { title: "Business"},
+            { title: "hollatchaboy"},
+            { title: "get it"},
+            { title: "that's what's up"},
+            { title: "aww yiss"},
+            { title: "jig"},
+            { title: "#tbt"},
+            { title: "#nofilter"},
+            { title: "thank you"},
+            { title: "thx"},
+            { title: "congrats"},
+            { title: "LOL"},
+            { title: "miss you"},
+            { title: "XOXOXO"},
+            { title: "call me maybe"},
+            { title: "yolo"},
+            { title: "yup"},
+            { title: "love you"},
+            { title: "for real"},
+            { title: "NO"},
+            { title: "this"},
+            { title: "me right now"},
+            { title: "me irl"},
+            { title: "this is so you"}
         ];
 
         return quotes
